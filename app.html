@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChefAI X App</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="header">🍳 ChefAI X</div>
+
+  <div class="top-controls">
+    <div class="serving-box">
+      <label for="servings">Servings:</label>
+      <select id="servings">
+        <option value="1">1</option>
+        <option value="2" selected>2</option>
+        <option value="4">4</option>
+        <option value="6">6</option>
+        <option value="8">8</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="language-box">
+    <label for="languageSelect">Choose Language:</label>
+    <select id="languageSelect">
+      <option value="English">English</option>
+      <option value="Hindi">Hindi</option>
+      <option value="Bengali">Bengali</option>
+      <option value="Spanish">Spanish</option>
+    </select>
+  </div>
+
+  <div id="historyContainer" class="history-container">
+    <h3>Recent Searches</h3>
+    <ul id="historyList"></ul>
+  </div>
+
+  <div class="suggestion-box">
+    <button onclick="sendMessage('Chicken Biryani')">Chicken Biryani</button>
+    <button onclick="sendMessage('Pasta')">Pasta</button>
+    <button onclick="sendMessage('Paneer Butter Masala')">Paneer Butter Masala</button>
+    <button onclick="sendMessage('Cake')">Cake</button>
+  </div>
+
+  <div id="chat" class="chat"></div>
+
+  <div class="input-area">
+    <input id="input" placeholder="Type a dish...">
+    <button onclick="sendMessage()">Send</button>
+    <button onclick="startVoice()">🎤</button>
+  </div>
+
+  <div class="input-area action-buttons">
+    <button onclick="saveRecipe()" title="Save Recipe">💾 Save</button>
+    <button onclick="shareRecipe()" title="Share Recipe">📤 Share</button>
+    <button onclick="downloadRecipe()" title="Download Recipe">⬇ Download</button>
+    <button onclick="speakRecipe()" title="Speak Recipe">🔊 Speak</button>
+    <button onclick="stopSpeaking()" title="Stop Speaking">⏹ Stop</button>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

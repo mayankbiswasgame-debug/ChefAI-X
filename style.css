@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle, #020617, #0f172a);
+  color: white;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  padding: 18px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.top-controls,
+.language-box {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.serving-box {
+  background: #1e293b;
+  padding: 10px 15px;
+  border-radius: 12px;
+}
+
+.serving-box select,
+.language-box select {
+  margin-left: 10px;
+  padding: 6px;
+  border-radius: 8px;
+  border: none;
+  background: #334155;
+  color: white;
+}
+
+.history-container {
+  background: #111827;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 14px;
+}
+
+.history-container h3 {
+  margin-bottom: 10px;
+  color: #22c55e;
+}
+
+.history-container ul {
+  list-style: none;
+}
+
+.history-container li {
+  background: #1e293b;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.history-container li:hover {
+  background: #334155;
+}
+
+.suggestion-box {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+.suggestion-box button {
+  background: #1e293b;
+  color: white;
+  border: 1px solid #334155;
+  white-space: nowrap;
+}
+
+.suggestion-box button:hover {
+  background: #334155;
+}
+
+.chat {
+  height: 42vh;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.msg {
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 14px;
+  max-width: 90%;
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+.user {
+  background: #3b82f6;
+  margin-left: auto;
+}
+
+.bot {
+  background: #1e293b;
+}
+
+.input-area {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  font-size: 16px;
+}
+
+button {
+  padding: 12px 14px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 15px;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.action-buttons button {
+  flex: 1;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.loading-dots {
+  display: flex;
+  gap: 5px;
+}
+
+.loading-dots span {
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  animation: bounce 0.8s infinite alternate;
+}
+
+.loading-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(-6px);
+    opacity: 1;
+  }
+}
